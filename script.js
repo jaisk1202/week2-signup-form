@@ -1,7 +1,7 @@
 const submitButton = document.querySelector(".submit");
 if(localStorage.getItem('userData')!==null){
   alert("Already logged in!")
-  window.location.href = "";
+  window.location.href = "https://jaisk1202.github.io/week2-signup-form/sign-in.html";
 } 
 
 //validation 
@@ -29,7 +29,7 @@ submitButton.addEventListener("click", (event) => {
         token:token
     }
     localStorage.setItem("userData",JSON.stringify(userData))
-    window.location.href = ""
+    window.location.href = "https://jaisk1202.github.io/week2-signup-form/sign-in.html"
   }
 });
 
