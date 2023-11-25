@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F9FAFD;
+    font-family: 'Prompt', sans-serif;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+    z-index: 20;
+}
+.eye{
+    cursor: pointer;
+}
+#welcome{
+    font-weight: 200;
+}
+h2{
+    font-weight: 600;
+    margin-top: -4px;
+    margin-bottom: 16px;
+}
+label{
+    margin: 8px 0 4px 0;
+}
+form{
+    border-radius: 12px;
+    box-shadow: 15px 15px 50px rgba(182, 180, 180, 0.5);
+    width: 450px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: #F9FAFD;
+}
+input{
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    font-size: 18px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 12px;
+    width: 100%;
+    outline: none;
+}
+.password{
+    display: flex;  
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+}
+.password-input{
+    border: none;
+}
+.submit{
+    border: none;
+    background: linear-gradient(90deg, rgb(230, 206, 252), blueviolet);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 5s linear;
+}
+.submit:hover{
+    background: linear-gradient(90deg, blueviolet, deepskyblue);
+    transition: background 5s linear;
+}
+#sign-up-button{
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+a{
+    color: aqua;
+}
+#error{
+    color: blueviolet;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 28px;
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    display: none;
+}
+
+/* background styling */
+.container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100vh;
+    overflow: hidden;
+}
+.line{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+    background: blueviolet;
+}
+.line-1{
+    z-index: 15;
+    opacity: 0.5;
+}
+.line-2{
+    z-index: 10;
+    opacity: 0.7;
+}style.css
+.line-3{
+    z-index: 5;
+}
+.wave{
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    box-sizing: border-box;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.wave1{
+    background-size: 50% 80px;
+}
+.wave2{
+    background-size: 50% 100px;
+    animation: animate 12s linear infinite;
+}
+
+.wave3{
+    background-size: 50% 80px;
+    animation: animate 18s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    50%{
+        transform: translateX(-25%) translateZ(0) scaleY(0.5);
+    }
+    100%{
+        transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+}
+
+@media screen and (max-width:550px){
+    form{
+        width: 80vw;
+        height: fit-content;
+        padding: 30px;
+    }
+    input{
+        height: 20px;
+        font-size: 14px;
+    }
+    label{
+        font-size: 14px;
+    }
+    .submit{
+        font-size: 12px;
+        padding: 10px;
+    }
+    h2{
+        font-size: 16px;
+        margin-top: -4px;
+    }
+}
+@media screen and (max-height:800px) {
+    form{
+        width: 30vw;
+        height: fit-content;
+        padding: 30px;
+    }
+    input{
+        height: 25px;
+        font-size: 14px;
+        padding: 15px;
+    }
+    label{
+        font-size: 14px;
+    }
+    .submit{
+        font-size: 12px;
+        padding: 10px;
+    }
+    h2{
+        font-size: 16px;
+        margin-top: -4px;
+    }
+}
+@media screen and (max-width:800px) and (max-height:800px) {
+    
+    form{
+        width: 400px;
+        height: fit-content;
+        padding: 30px;
+    }
+    input{
+        height: 25px;
+        font-size: 14px;
+        padding: 15px;
+    }
+    label{
+        font-size: 14px;
+    }
+    .submit{
+        font-size: 12px;
+        padding: 10px;
+    }
+    h2{
+        font-size: 16px;
+        margin-top: -4px;
+    }
+}
+@media screen and (max-width:500px) and (max-height:800px) {
+    form{
+        width: 300px;
+        height: fit-content;
+        padding: 30px;
+    }
+    input{
+        height: 25px;
+        font-size: 14px;
+        padding: 15px;
+    }
+    label{
+        font-size: 14px;
+    }
+    .submit{
+        font-size: 12px;
+        padding: 10px;
+    }
+    h2{
+        font-size: 16px;
+        margin-top: -4px;
+    }
+    .submit{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:350px) and (max-height:800px) {
+    form{
+        width: 250px;
+        height: fit-content;
+        padding: 30px;
+    }
+    input{
+        height: 25px;
+        font-size: 14px;
+        padding: 15px;
+    }
+    label{
+        font-size: 14px;
+    }
+    .submit{
+        font-size: 12px;
+        padding: 10px;
+    }
+    h2{
+        font-size: 16px;
+        margin-top: -4px;
+    }
+    .submit{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:280px) and (max-height:800px) {
+    #welcome{
+        font-size: 12px;
+    }
+    form{
+        width: 200px;
+        height: fit-content;
+        padding: 30px;
+    }
+    input{
+        height: 18px;
+        font-size: 12px;
+        padding: 10px;
+    }
+    label{
+        font-size: 12px;
+    }
+    .submit{
+        font-size: 12px;
+        padding: 10px;
+    }
+    h2{
+        font-size: 14px;
+        margin-top: -4px;
+    }
+    .submit{
+        font-size: 10px;
+    }
+}
+
+
+
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #0e6cc4;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+/*waves****************************/
+
+
+.box {
+	position: fixed;
+	top: 0;
+	transform: rotate(80deg);
+	left: 0;
+}
+
+.wave {
+	position: fixed;
+	top: 0;
+	left: 0;
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  background: #0af;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 7000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 7500ms infinite linear;
+	position: fixed;
+	background-color: #77daff;
+}
+
+.wave.-two {
+  animation: drift 3000ms infinite linear;
+  opacity: .1;
+  background: black;
+	position: fixed;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+/*LOADING SPACE*/
+
+.contain {
+	animation-delay: 4s;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  background: #25a7d7;
+  background: -webkit-linear-gradient(#25a7d7, #2962FF);
+  background: linear-gradient(#25a7d7, #25a7d7);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+
+.icon img {
+  -webkit-animation: anim 2s ease infinite;
+  animation: anim 2s ease infinite;
+  -webkit-transform: scale(0,0) rotateZ(180deg);
+  transform: scale(0,0) rotateZ(180deg);
+}
+
+@-webkit-keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+@keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
